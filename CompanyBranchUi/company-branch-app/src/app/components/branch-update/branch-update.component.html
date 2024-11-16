@@ -1,0 +1,17 @@
+<div *ngIf="branch">
+    <h2>Update Branch</h2>
+    <form (ngSubmit)="updateBranch()">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="branch.name" name="name" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Company</mat-label>
+        <input matInput [(ngModel)]="branch.company" name="company" required />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Update</button>
+    </form>
+  </div>
+  

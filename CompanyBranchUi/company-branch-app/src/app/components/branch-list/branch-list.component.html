@@ -1,0 +1,20 @@
+<div>
+    <h2>Branches</h2>
+    <button mat-raised-button color="primary" routerLink="/create">Create New Branch</button>
+  
+    <table mat-table [dataSource]="branches" class="mat-elevation-z8">
+      <tr *ngFor="let branch of branches">
+        <td>{{ branch.name }}</td>
+        <td>{{ branch.company }}</td>
+        <td>
+          <button mat-raised-button color="accent" [routerLink]="'/update/' + branch.id">
+            Update
+          </button>
+          <button mat-raised-button color="warn" (click)="deleteBranch(branch.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj": {}
+    "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj": {
+    "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj",
+        "projectUniqueName": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj",
         "projectName": "CompanyBranchAPI",
-        "projectPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj",
-        "packagesPath": "C:\\Users\\pcc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\obj\\",
+        "projectPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\CompanyBranchAPI.csproj",
+        "packagesPath": "C:\\Users\\a915481\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pcc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a915481\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,17 +23,18 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/uefa/_packaging/UEFA.Enterprise.Private/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
-                "projectPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj"
+              "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
+                "projectPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj"
               },
-              "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj": {
-                "projectPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj"
+              "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj": {
+                "projectPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj"
               }
             }
           }
@@ -42,74 +43,36 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Serilog.AspNetCore": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.135\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
+    "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
+        "projectUniqueName": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
         "projectName": "CompanyBranchCore",
-        "projectPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
-        "packagesPath": "C:\\Users\\pcc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\obj\\",
+        "projectPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
+        "packagesPath": "C:\\Users\\a915481\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pcc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a915481\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,7 +81,8 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/uefa/_packaging/UEFA.Enterprise.Private/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -130,11 +94,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -146,31 +105,25 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.135\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj": {
+    "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj",
         "projectName": "CompanyBranchInfrastructure",
-        "projectPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj",
-        "packagesPath": "C:\\Users\\pcc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\obj\\",
+        "projectPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\CompanyBranchInfrastructure.csproj",
+        "packagesPath": "C:\\Users\\a915481\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchInfrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pcc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a915481\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -179,14 +132,15 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/uefa/_packaging/UEFA.Enterprise.Private/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
-                "projectPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj"
+              "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
+                "projectPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj"
               }
             }
           }
@@ -195,51 +149,22 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[13.0.1, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.135\\RuntimeIdentifierGraph.json"
         }
       }
     }

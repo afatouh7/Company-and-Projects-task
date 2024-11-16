@@ -1,0 +1,6 @@
+<div *ngIf="branch">
+    <h2>{{ branch.name }} Details</h2>
+    <p><strong>Company:</strong> {{ branch.company }}</p>
+    <p><strong>Status:</strong> {{ branch.isDeleted ? 'Inactive' : 'Active' }}</p>
+  </div>
+  

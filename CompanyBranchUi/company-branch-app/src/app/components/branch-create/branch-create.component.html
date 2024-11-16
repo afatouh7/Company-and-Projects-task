@@ -1,0 +1,17 @@
+<div>
+    <h2>Create Branch</h2>
+    <form (ngSubmit)="createBranch()">
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="branch.name" name="name" required />
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Company</mat-label>
+        <input matInput [(ngModel)]="branch.company" name="company" required />
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit">Create</button>
+    </form>
+  </div>
+  
