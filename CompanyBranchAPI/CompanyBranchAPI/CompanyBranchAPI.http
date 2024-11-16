@@ -1,0 +1,6 @@
+@CompanyBranchAPI_HostAddress = http://localhost:5029
+
+GET {{CompanyBranchAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

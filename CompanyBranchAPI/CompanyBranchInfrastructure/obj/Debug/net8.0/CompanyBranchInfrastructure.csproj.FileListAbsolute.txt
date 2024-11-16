@@ -1,0 +1,16 @@
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.csproj.AssemblyReference.cache
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.AssemblyInfoInputs.cache
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.AssemblyInfo.cs
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.csproj.CoreCompileInputs.cache
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.sourcelink.json
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\bin\Debug\net8.0\CompanyBranchInfrastructure.deps.json
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\bin\Debug\net8.0\CompanyBranchInfrastructure.dll
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\bin\Debug\net8.0\CompanyBranchInfrastructure.pdb
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\bin\Debug\net8.0\CompanyBranchCore.dll
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\bin\Debug\net8.0\CompanyBranchCore.pdb
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyB.843B2ED5.Up2Date
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.dll
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\refint\CompanyBranchInfrastructure.dll
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\CompanyBranchInfrastructure.pdb
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchInfrastructure\obj\Debug\net8.0\ref\CompanyBranchInfrastructure.dll

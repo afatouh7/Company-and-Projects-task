@@ -1,0 +1,12 @@
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\bin\Debug\net8.0\CompanyBranchCore.deps.json
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\bin\Debug\net8.0\CompanyBranchCore.dll
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\bin\Debug\net8.0\CompanyBranchCore.pdb
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\CompanyBranchCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\CompanyBranchCore.AssemblyInfoInputs.cache
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\CompanyBranchCore.AssemblyInfo.cs
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\CompanyBranchCore.csproj.CoreCompileInputs.cache
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\CompanyBranchCore.sourcelink.json
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\CompanyBranchCore.dll
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\refint\CompanyBranchCore.dll
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\CompanyBranchCore.pdb
+C:\Users\pcc\Desktop\task\Company-and-Projects-task\CompanyBranchAPI\CompanyBranchCore\obj\Debug\net8.0\ref\CompanyBranchCore.dll
