@@ -1,0 +1,13 @@
+- CompanyBranchAPI
+  - Core
+    - Entities
+    - Interfaces
+  - Application
+    - DTOs
+    - Interfaces
+    - Services
+  - Infrastructure
+    - Data
+    - Repositories
+  - API
+    - Controllers
