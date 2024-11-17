@@ -1,0 +1,131 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+name: 1.0.0.$(Rev:r)
+variables:
+  - name: containerRegistry
+    value: uefacontainerregistry
+  - name: image
+    value: company Branches
+  - name: componentName
+    value: companyBranches
+
+
+trigger:
+  branches:
+    include:
+      - develop
+
+parameters:
+  - name: deploy_DEV
+    displayName: Deploy in DEV
+    default: true
+    type: boolean
+  - name: deploy_PRE
+    displayName: Deploy in PRE
+    default: false
+    type: boolean
+  - name: deploy_PRD
+    displayName: Deploy in PRD
+    default: false
+    type: boolean
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: BuildAndPushAPI
+    displayName: Build and Push API
+    jobs:
+      - job: BuildAndPushAPI
+        displayName: "Build and Push"
+        steps:
+          - task: Cache@2
+            displayName: Cache task
+            inputs:
+              key: 'docker | "$(Agent.OS)" | cache'
+              path: $(Pipeline.Workspace)/docker
+              cacheHitVar: CACHE_RESTORED #Variable to set to 'true' when the cache is restored
+
+          - script: |
+              docker load -i $(Pipeline.Workspace)/docker/cache.tar
+            displayName: Docker restore
+            condition: and(not(canceled()), eq(variables.CACHE_RESTORED, 'true'))
+
+          - task: PowerShell@2
+            displayName: Create version.json
+            inputs:
+              targetType: "inline"
+              script: |
+                $version = [System.Environment]::GetEnvironmentVariable('BUILD_BUILDNUMBER')
+                $currentDate=$(get-date -Format "yyyy-MM-dd hh:mm:ss")
+                New-Item -Force -Path CompanyBranchAPI -Name "version.json" -ItemType "file" -Value "{'version': '$version', 'time':  '$currentDate'}"
+          #
+          #  PENDING TO IMPLEMENT DOCKER CLEANUP IN ACR
+          #
+          # - task: AzureCLI@2
+          #   displayName: Container Registry cleanup
+          #   inputs:
+          #     azureSubscription: "UEFA PRE"
+          #     scriptType: pscore
+          #     scriptLocation: inlineScript
+          #     visibleAzLogin: false
+          #     inlineScript: |
+          #       az acr run --cmd "acr purge --filter '$(image):latest' --ago 0d --untagged --keep 1" --registry $(containerRegistry) /dev/null
+
+          - task: Docker@2
+            displayName: Build image latest
+            inputs:
+              containerRegistry: "UEFA"
+              repository: "$(image)"
+              command: "buildAndPush"
+              Dockerfile: "**/Dockerfile"
+              buildContext: "."
+              tags: |
+                latest
+                $(build.buildNumber)
+              arguments: "--build-arg SONAR_HOST=$(SONAR_HOST) --build-arg SONAR_LOGIN=$(SONAR_LOGIN) --build-arg VERSION=$(build.buildNumber)"
+
+          - script: |
+              mkdir -p $(Pipeline.Workspace)/docker
+              docker save -o $(Pipeline.Workspace)/docker/cache.tar $(containerRegistry).azurecr.io/$(image):latest
+            displayName: Docker save
+            condition: and(not(canceled()), not(failed()), ne(variables.CACHE_RESTORED, 'true'))
+
+  - stage: DeployDEV
+    displayName: Deploy DEV
+    # condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'), eq(${{ parameters.deploy_DEV}}, true))
+    condition: and(succeeded(), eq(${{ parameters.deploy_DEV}}, true))
+    dependsOn: [BuildAndPushAPI]
+    variables:
+      - name: ResourceGroup
+        value: company-Branches-dev-we
+      - name: containerAppResouce
+        value: company-Branches-dev
+    jobs:
+      - deployment: deploy_dev
+        displayName: Deploy DEV
+        environment: "Development"
+      - job: Deploy_container_app_and_cleanup
+        displayName: Deploy ContainerApp
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - task: AzureCLI@2
+            displayName: Update API container app
+            inputs:
+              azureSubscription: "UEFA PRE"
+              scriptType: "pscore"
+              scriptLocation: "inlineScript"
+              visibleAzLogin: false
+              inlineScript: |
+                $version = [System.Environment]::GetEnvironmentVariable('BUILD_BUILDNUMBER')
+                $versionString = $version.Replace('.','')
+                echo $versionString
+                az config set extension.use_dynamic_install=yes_without_prompt
+                az containerapp ingress update -n $(containerAppResouce) -g $(ResourceGroup) --target-port 80
+                az containerapp update -n $(containerAppResouce) -g $(ResourceGroup) --image $(containerRegistry).azurecr.io/$(image):$version --revision-suffix v-$versionString --set-env-vars HTTP_PORT=80 ASPNETCORE_HTTP_PORTS=80
+
+ 
