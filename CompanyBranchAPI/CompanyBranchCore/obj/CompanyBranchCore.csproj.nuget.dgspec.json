@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {}
+    "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
+    "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
+        "projectUniqueName": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
         "projectName": "CompanyBranchCore",
-        "projectPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
-        "packagesPath": "C:\\Users\\a915481\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a915481\\Desktop\\New folder (9)\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\obj\\",
+        "projectPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\CompanyBranchCore.csproj",
+        "packagesPath": "C:\\Users\\pcc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pcc\\Desktop\\task\\Company-and-Projects-task\\CompanyBranchAPI\\CompanyBranchCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\a915481\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pcc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -23,8 +23,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/uefa/_packaging/UEFA.Enterprise.Private/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -36,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -47,11 +51,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.135\\RuntimeIdentifierGraph.json"
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

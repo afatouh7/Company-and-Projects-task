@@ -15,13 +15,14 @@
         public bool IsDeleted { get; set; }
         public int CompanyId { get; set; }
     }
-    public class BranchsDto
+    public class GetBranchDto
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Location { get; set; }
         public bool IsDeleted { get; set; }
         public int CompanyId { get; set; } 
-        public CompanyDto Company { get; set; }
+        public string Company { get; set; }
     }
 
 }

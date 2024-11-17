@@ -5,6 +5,7 @@ using CompanyBranchCore.Entities;
 using CompanyBranchCore.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CompanyBranchAPI.Controllers
 {
@@ -23,17 +24,15 @@ namespace CompanyBranchAPI.Controllers
             _logger = logger;
         }
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromQuery] int pageNumber = 1,
-        [FromQuery] int pageSize = 10)
+        public async Task<IActionResult> GetAll(int pageNumber = 1,int pageSize = 10)
         {
             try
             {
                 var result = await _unitOfWork.BranchRepository.GetAllWithIncludeAsync(
-            b => !b.IsDeleted,
-            pageNumber,
-            pageSize,
-            b => b.Company
-        );
+                     b => !b.IsDeleted,
+                            pageNumber,
+                             pageSize,
+                                b => b.Company);
 
                 
                 IEnumerable<Branch> branches = result.Items;
@@ -41,12 +40,21 @@ namespace CompanyBranchAPI.Controllers
 
                 var pagedResult = new PagedResult<Branch>(
                     branches,
-                    totalCount,
-                    pageNumber,
-                    pageSize
-                );
+                      totalCount,
+                          pageNumber,
+                              pageSize);
 
-                return Ok(pagedResult);
+                // Return response without $id and $values
+                var results = new
+                {
+                    items = pagedResult.Items,
+                    totalCount = pagedResult.TotalCount,
+                    totalPages = pagedResult.TotalPages,
+                    currentPage = pagedResult.CurrentPage,
+                    pageSize = pagedResult.PageSize
+                };
+
+                return Ok(results);
             }
             catch (Exception ex)
             {
@@ -57,7 +65,7 @@ namespace CompanyBranchAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var branch = await _unitOfWork.BranchRepository.GetByIdAsync(id);
+            var branch = await _unitOfWork.BranchRepository.GetByIdWithIncludeAsync(id, query => query.Include(b => b.Company));
                // b => b.Id == id, b => b.Company);
 
             if (branch == null )
@@ -66,7 +74,7 @@ namespace CompanyBranchAPI.Controllers
                 return NotFound();
             }
 
-            var branchDto = _mapper.Map<BranchsDto>(branch);
+            var branchDto = _mapper.Map<GetBranchDto>(branch);
             return Ok(branchDto);
         }
         [HttpPost]

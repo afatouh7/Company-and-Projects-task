@@ -5,13 +5,19 @@
         <mat-label>Name</mat-label>
         <input matInput [(ngModel)]="branch.name" name="name" required />
       </mat-form-field>
-  
+      <mat-form-field appearance="fill">
+        <mat-label>Location</mat-label>
+        <input matInput [(ngModel)]="branch.location" name="location" required />
+      </mat-form-field> 
+      <mat-form-field appearance="fill">
+        <mat-label>Id</mat-label>
+        <input matInput [(ngModel)]="branch.id" name="id" required />
+      </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Company</mat-label>
-        <input matInput [(ngModel)]="branch.company" name="company" required />
+        <input matInput [(ngModel)]="branch.company" name="company" required [disabled]="isCompanyDisabled"/>
       </mat-form-field>
   
       <button mat-raised-button color="primary" type="submit">Update</button>
     </form>
-  </div>
-  
+</div>

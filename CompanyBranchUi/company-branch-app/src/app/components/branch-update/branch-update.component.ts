@@ -10,7 +10,7 @@ import { BranchService } from 'src/app/services/branch.service';
 })
 export class BranchUpdateComponent {
   branch: Branch | null = null;
-
+  isCompanyDisabled = true;
   constructor(
     private route: ActivatedRoute,
     private branchService: BranchService,
@@ -21,18 +21,24 @@ export class BranchUpdateComponent {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     if (id) {
       this.branchService.getBranch(id).subscribe({
-        next: (branch) => (this.branch = branch),
+        next: (branch) => (this.branch = branch), 
         error: (err) => console.error('Error fetching branch:', err),
-      });
+      }); 
+      
     }
   }
 
   updateBranch(): void {
-    if (this.branch) {
+    if (this.branch && this.branch.id !== undefined) {
       this.branchService.updateBranch(this.branch.id, this.branch).subscribe({
-        next: () => this.router.navigate(['/']),
+        next: (response) => {
+          console.log('Branch updated successfully:', response);
+          this.router.navigate(['/']);
+        },
         error: (err) => console.error('Error updating branch:', err),
       });
+    } else {
+      console.error('Branch ID is undefined');
     }
   }
 }

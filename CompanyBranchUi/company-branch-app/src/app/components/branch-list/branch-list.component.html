@@ -1,20 +1,46 @@
 <div>
-    <h2>Branches</h2>
-    <button mat-raised-button color="primary" routerLink="/create">Create New Branch</button>
-  
-    <table mat-table [dataSource]="branches" class="mat-elevation-z8">
-      <tr *ngFor="let branch of branches">
-        <td>{{ branch.name }}</td>
-        <td>{{ branch.company }}</td>
-        <td>
-          <button mat-raised-button color="accent" [routerLink]="'/update/' + branch.id">
-            Update
-          </button>
-          <button mat-raised-button color="warn" (click)="deleteBranch(branch.id)">
-            Delete
-          </button>
-        </td>
-      </tr>
-    </table>
+  <h2>Branches</h2>
+  <button mat-raised-button color="primary" routerLink="/create">Create New Branch</button>
+
+  <button mat-raised-button color="secondary" routerLink="/create-company">Create new Company</button>
+  <table mat-table [dataSource]="branches" class="mat-elevation-z8" *ngIf="branches && branches.length > 0">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Branch Name</th>
+      <td mat-cell *matCellDef="let branch">{{ branch.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="location">
+      <th mat-header-cell *matHeaderCellDef>Location</th>
+      <td mat-cell *matCellDef="let branch">{{ branch.location }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="company">
+      <th mat-header-cell *matHeaderCellDef>Company Name</th>
+      <td mat-cell *matCellDef="let branch">{{ branch.company?.name }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let branch">
+        <button mat-raised-button style="margin-right: 8px;" [routerLink]="'/update/' + branch.id">Update</button>
+        <button mat-raised-button color="warn" (click)="deleteBranch(branch.id ?? 0)">Delete</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+
+  <p *ngIf="branches && branches.length === 0">No branches available.</p>
+
+  <div *ngIf="branches && branches.length > 0" class="paginator-footer">
+    <mat-paginator
+      [length]="totalCount"
+      [pageSize]="pageSize"
+      [pageIndex]="pageNumber - 1"
+      (page)="onPageChange($event)">
+    </mat-paginator>
   </div>
-  
+</div>

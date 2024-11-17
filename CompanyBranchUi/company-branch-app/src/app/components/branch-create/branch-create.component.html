@@ -5,12 +5,18 @@
         <mat-label>Name</mat-label>
         <input matInput [(ngModel)]="branch.name" name="name" required />
       </mat-form-field>
-  
+      <mat-form-field appearance="fill">
+        <mat-label>location</mat-label>
+        <input matInput [(ngModel)]="branch.location" name="location" required />
+      </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Company</mat-label>
-        <input matInput [(ngModel)]="branch.company" name="company" required />
+        <mat-select [(ngModel)]="branch.companyId" name="company" required>
+          <mat-option *ngFor="let company of companies" [value]="company.id">
+            {{ company.name }}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
-  
       <button mat-raised-button color="primary" type="submit">Create</button>
     </form>
   </div>

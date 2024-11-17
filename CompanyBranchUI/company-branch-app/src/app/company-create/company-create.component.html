@@ -1,0 +1,23 @@
+<div>
+    <h2>Create Company</h2>
+    <form [formGroup]="companyForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <input matInput placeholder="Company Name" formControlName="name">
+            <mat-error *ngIf="form['name'].hasError('required')">Company name is required.</mat-error>
+            <mat-error *ngIf="form['name'].hasError('minlength')">Company name must be at least 5 characters long.</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <input matInput placeholder="Address" formControlName="address">
+            <mat-error *ngIf="form['address'].hasError('required')">Address is required.</mat-error>
+            <mat-error *ngIf="form['address'].hasError('minlength')">Address must be at least 5 characters long.</mat-error>
+          </mat-form-field>
+  
+      <mat-checkbox formControlName="isDeleted">Is Deleted</mat-checkbox>
+  
+      <button mat-raised-button color="primary" type="submit" >
+        Create
+      </button>
+    </form>
+  </div>
+  

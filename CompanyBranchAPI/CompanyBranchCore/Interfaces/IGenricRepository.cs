@@ -12,6 +12,7 @@ namespace CompanyBranchCore.Interfaces
         Task<(IEnumerable<T> Items, int TotalCount)> GetAllAsync(int pageSize = 10, int pageNumber = 1, Expression<Func<T, bool>>? filter = null, string? orderBy = null
                 );
         Task<T?> GetByIdAsync(int id);
+        Task<T?> GetByIdWithIncludeAsync(int id, Func<IQueryable<T>, IQueryable<T>>? include = null); 
         Task AddAsync(T entity);
         Task UpdateAsync(T entity);
         Task DeleteAsync(int id);

@@ -49,6 +49,17 @@ namespace CompanyBranchInfrastructure.Repositories
             _dbSet.Update(entity);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<T?> GetByIdWithIncludeAsync(int id, Func<IQueryable<T>, IQueryable<T>>? include = null)
+        {
+            var query = _context.Set<T>().AsQueryable();
+            if (include != null)
+            {
+                query = include(query);
+            }
+            return await query.FirstOrDefaultAsync(e => EF.Property<int>(e, "Id") == id);  
+        }
+
         public async Task<(IEnumerable<T> Items, int TotalCount)> GetAllWithIncludeAsync(
        Expression<Func<T, bool>>? filter = null,
        int pageNumber = 1,

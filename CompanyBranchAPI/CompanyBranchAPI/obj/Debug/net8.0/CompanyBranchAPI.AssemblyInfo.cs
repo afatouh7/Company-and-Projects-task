@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CompanyBranchAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bd96737ec26fe70d34768d76bdf302017554c71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa615828537c491a61946867b8317102a2e0a480")]
 [assembly: System.Reflection.AssemblyProductAttribute("CompanyBranchAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CompanyBranchAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
